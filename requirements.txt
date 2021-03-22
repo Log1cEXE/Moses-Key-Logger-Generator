@@ -1,0 +1,6 @@
+colorama
+os
+subprocess
+signal
+sys
+time
