@@ -7,7 +7,6 @@ Making a .pyw keylogger that will send your email the logs every time you select
 
 # Upcoming Features -
 
-Encrypting to bypass Anti-Virus.
 ...
 
 # Download/Running Instructions - 
